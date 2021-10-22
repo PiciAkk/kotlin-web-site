@@ -45,7 +45,7 @@ Here are some recommendations for configuring Gradle for better compilation perf
       the `.framework` for only the platform you’re using.
       
       To build a platform-specific framework, call the  `packForXcode` task generated
-      by the [KMM project wizard](https://kotlinlang.org/docs/mobile/create-first-app.html). 
+      by the [KMM project wizard](kmm-create-first-app.md). 
       
       > Remember that in this case, you will need to clean the build using `./gradlew clean` after switching between the
       > device and the simulator. See [this issue](https://youtrack.jetbrains.com/issue/KT-40907) for details.
@@ -77,5 +77,6 @@ Here are some recommendations for configuring Gradle for better compilation perf
   the build completes successfully. It is possible that these properties were added previously to work around issues that
   have already been fixed.
 
+## Windows OS configuration
 
-
+* **Configure Windows Security**. Windows Security may slow down the Kotlin/Native compiler. You can avoid this by adding the `.konan` directory, which is located in `%USERPROFILE%` by default, to Windows Security exclusions. Learn how to [add exclusions to Windows Security](https://support.microsoft.com/en-us/windows/add-an-exclusion-to-windows-security-811816c0-4dfd-af4a-47e4-c301afe13b26).

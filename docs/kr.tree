@@ -4,15 +4,16 @@
 
 <product-profile id="kr"
                  name="Kotlin"
-                 start-page="home.md"
+                 start-page="home.xml"
                  status="release">
 
-    <toc-element id="home.md" toc-title="Home"/>
+    <toc-element id="home.xml" toc-title="Home"/>
 
     <toc-element toc-title="Get started" id="getting-started.md"/>
 
     <toc-element toc-title="Kotlin overview">
         <toc-element id="multiplatform.md"/>
+        <toc-element id="kmm-overview.md"/>
         <toc-element id="server-overview.md" accepts-web-file-names="httpservlets.html"/>
         <toc-element id="android-overview.md"/>
         <toc-element id="js-overview.md"/>
@@ -34,6 +35,9 @@
                 <toc-element id="whatsnew12.md" toc-title="Kotlin 1.2"/>
                 <toc-element id="whatsnew11.md" toc-title="Kotlin 1.1"/>
             </toc-element>
+        </toc-element>
+        <toc-element toc-title="Kotlin for KMM">
+            <toc-element id="whats-new-in-kotlin-for-kmm.md"/>
         </toc-element>
         <toc-element toc-title="Kotlin plugin">
             <toc-element id="whatsnew-plugin-20212.md" toc-title="Kotlin plugin 2021.2"/>
@@ -98,6 +102,26 @@
 
     <toc-element toc-title="Multiplatform programming">
         <toc-element id="mpp-intro.md" accepts-web-file-names="building-mpp-with-gradle.html,intro-to-kotlin-mpp.html"/>
+        <toc-element toc-title="Kotlin Multiplatform Mobile (KMM)">
+            <toc-element id="kmm-getting-started.md"/>
+            <toc-element id="kmm-setup.md"/>
+            <toc-element id="kmm-create-first-app.md"/>
+            <toc-element id="kmm-understand-project-structure.md"/>
+            <toc-element id="kmm-integrate-in-existing-app.md"/>
+            <toc-element id="kmm-connect-to-platform-specific-apis.md"/>
+            <toc-element id="kmm-add-dependencies.md"/>
+            <toc-element id="kmm-configure-sqldelight-for-data-storage.md"/>
+            <toc-element id="kmm-use-ktor-for-networking.md"/>
+            <toc-element id="kmm-publish-apps.md"/>
+            <toc-element toc-title="Work with concurrency">
+                <toc-element id="kmm-concurrency-overview.md"/>
+                <toc-element id="kmm-concurrent-mutability.md"/>
+                <toc-element id="kmm-concurrency-and-coroutines.md"/>
+            </toc-element>
+            <toc-element id="kmm-samples.md"/>
+            <toc-element id="kmm-faq.md"/>
+            <toc-element id="kmm-introduce-your-team.md"/>
+        </toc-element>
         <toc-element id="mpp-create-lib.md"/>
         <toc-element id="mpp-discover-project.md"/>
         <toc-element id="mpp-share-on-platforms.md"/>
@@ -189,6 +213,7 @@
 
     <toc-element toc-title="Releases and roadmap">
         <toc-element id="releases.md"/>
+        <toc-element id="kmm-plugin-releases.md"/>
         <toc-element id="plugin-releases.md"/>
         <toc-element id="roadmap.md"/>
     </toc-element>
@@ -262,6 +287,17 @@
             <toc-element id="kapt.md" toc-title="kapt"/>
             <toc-element id="lombok.md" toc-title="Lombok"/>
         </toc-element>
+        <toc-element toc-title="Kotlin Symbol Processing API">
+            <toc-element id="ksp-overview.md" toc-title="KSP overview"/>
+            <toc-element id="ksp-quickstart.md" toc-title="Quickstart"/>
+            <toc-element id="ksp-why-ksp.md" toc-title="Why KSP"/>
+            <toc-element id="ksp-examples.md" toc-title="Examples"/>
+            <toc-element id="ksp-additional-details.md" toc-title="How KSP models Kotlin code"/>
+            <toc-element id="ksp-reference.md" toc-title="Reference for Java annotation processor authors"/>
+            <toc-element id="ksp-incremental.md" toc-title="Incremental processing"/>
+            <toc-element id="ksp-multi-round.md" toc-title="Multiple round processing"/>
+            <toc-element id="ksp-faq.md" toc-title="Frequently asked questions"/>
+        </toc-element>
         <toc-element id="kotlin-and-ci.md" toc-title="TeamCity"/>
         <toc-element id="kotlin-doc.md" toc-title="KDoc and Dokka"/>
         <toc-element id="kotlin-osgi.md" toc-title="OSGi"/>
@@ -271,6 +307,8 @@
         <toc-element id="learning-materials-overview.md" toc-title="Overview"/>
         <toc-element href="https://play.kotlinlang.org/byExample/overview" toc-title="Kotlin by example"/>
         <toc-element id="koans.md"/>
+        <toc-element href="https://hyperskill.org/tracks/18" toc-title="Kotlin Basics track"/>
+        <toc-element id="advent-of-code.md" toc-title="Advent of Code puzzles"/>
         <toc-element id="books.md"/>
         <toc-element toc-title="Learn in IDE (EduTools)">
             <toc-element id="edu-tools-learner.md" toc-title="Learn Kotlin"/>
@@ -291,6 +329,7 @@
             <toc-element id="components-stability.md"/>
             <toc-element id="components-stability-pre-1.4.md"/>
             <toc-element toc-title="Compatibility">
+                <toc-element id="compatibility-guide-16.md"/>
                 <toc-element id="compatibility-guide-15.md"/>
                 <toc-element id="compatibility-guide-14.md"/>
                 <toc-element id="compatibility-guide-13.md" />
@@ -306,7 +345,13 @@
         </toc-element>
         <toc-element id="security.md"/>
         <toc-element id="kotlin-pdf.md"/>
-        <toc-element toc-title="Press kit" href="https://kotlinlang.org/assets/kotlin-media-kit.pdf"/>
+        <toc-element toc-title="Kotlin brand assets">
+            <toc-element id="kotlin-mascot.md"/>
+            <toc-element id="kotlin-logo.md"/>
+            <toc-element id="kotlin-nights-branding.md"/>
+            <toc-element id="kug-branding.md"/>
+            <toc-element toc-title="Press kit" href="https://kotlinlang.org/assets/kotlin-media-kit.pdf"/>
+        </toc-element>
     </toc-element>
 
 </product-profile>

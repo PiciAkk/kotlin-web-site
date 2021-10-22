@@ -420,7 +420,7 @@ Learn more about [Swift/Objective-C interoperability](native-objc-interop.md).
 
 [LLD](https://lld.llvm.org/) is a linker from the LLVM project, which we plan to start using in Kotlin/Native for MinGW targets because of its benefits over the default ld.bfd – primarily its better performance.
 
-However, the latest stable version of LLD doesn’t support direct linkage against DLL for MinGW (Windows) targets. Such linkage requires using [import libraries](​​https://stackoverflow.com/questions/3573475/how-does-the-import-library-work-details/3573527#3573527). Although they aren’t needed with Kotlin/Native 1.5.30, we’re adding a warning to inform you that such usage is incompatible with LLD that will become the default linker for MinGW in the future.
+However, the latest stable version of LLD doesn’t support direct linkage against DLL for MinGW (Windows) targets. Such linkage requires using [import libraries](https://stackoverflow.com/questions/3573475/how-does-the-import-library-work-details/3573527#3573527). Although they aren’t needed with Kotlin/Native 1.5.30, we’re adding a warning to inform you that such usage is incompatible with LLD that will become the default linker for MinGW in the future.
 
 Please share your thoughts and concerns about the transition to the LLD linker in [this YouTrack issue](https://youtrack.jetbrains.com/issue/KT-47605).
 
@@ -496,7 +496,7 @@ plugins {
 }
 
 kotlin {
-    def xcf = XCFrameworkConfig(project)
+    def xcf = new XCFrameworkConfig(project)
 
     ios {
         binaries.framework {
@@ -555,7 +555,7 @@ Previously, we published the [migration guide for the JS IR backend](js-ir-migra
 
 Kotlin 1.5.30 brings JavaScript source map generation for the Kotlin/JS IR backend. This will improve the Kotlin/JS debugging experience when the IR backend is enabled, with full debugging support that includes breakpoints, stepping, and readable stack traces with proper source references.
 
-Learn more about [how to debug Kotlin/JS in the browser or IntelliJ IDEA Ultimate](js-debugging.md).
+Learn how to [debug Kotlin/JS in the browser or IntelliJ IDEA Ultimate](js-debugging.md).
 
 ## Gradle
 
